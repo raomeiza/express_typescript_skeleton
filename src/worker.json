@@ -1,0 +1,812 @@
+[{
+  "_id": {
+    "$oid": "62c977a459f3f601f1ab6fcf"
+  },
+  "firstname": "abdulhameed A",
+  "email": "blesseth.omeiza@gmail.com",
+  "mobile": "3234",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "lastname": "abdulraheem",
+  "gender": "male",
+  "userId": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": true,
+  "unit": "admin",
+  "active": true,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "password": "9492125bd528bedb0463698585e1db7f$a90259f6dfd4695caac92a115a0845d1bc14e29e05e792bc0a15ba68399a335fc6f55082af3f74e08bb7a0dc5eda00f345544e6b0865c1e7e9bb4f88437423e91052a112b30d63f4f28c8b48bd13def120b9a8cd2f55019d3023333636640aa08e83e1d573b157f4bcb8b91f68119a417a48c075d6b1f6a33e4f07495e9606742d270d5fc81d84efeeaadecaf11c96b10a0599f1b007b41e0127ee772f1ba9a77a9f803abdd2e14ca8c980915ddb060a7cb930a906ddaecd7de0ffefc72f63e56722e5ae7586e6d74cc81fb00ae86513551f2271c6850d15819aa2f4697cd124dfe9f809e02427ae722d518152d0a1e9e4f37b45adfd91352a597288619b5b1835c245636da08d2d6d3aa1046c87ae63bd7aae7ae2100555da187638dc22cce429d53a00e0b4c68941893c93eee9dc43a852f0f476f3845a24fa5ff680c870789d769da0a4b4a7da05c54c570cb7aa243d70147f856e040c060a8e196d3fb995bb510bf6441ba2aab640c5641b276e23a53cc710add583f48ee6aecdc229579d4b470e22fdac9550e9eba51e880141ca8aadad2f0a0d07fcb2fa1cbf02934b23a6a4798b24b12b86f3ebc77b6c0ebc9b09a68e6d7d25748c8db1feb629fdc6e1aedfe19258c18362fe49a534a2ebc7cb60b8ccb94d5f97964c34642934558d3552ddeabeda124c086abd65c87c2b89e69bf2e9764d504c6287d950ecbadc1217",
+  "emailVerified": true,
+  "mobileVerified": true,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1657370532189"
+    }
+  },
+  "__v": 0,
+  "invitationId": "62c055401b41f1b2a6ab82e2",
+  "passwordResetToken": null,
+  "ageGroup": "26-30",
+  "address": "Opposite FUT MINNA main campus"
+},{
+  "_id": {
+    "$oid": "62d536e739791f3e3b220490"
+  },
+  "firstname": [],
+  "email": "blesseth.omeiza@gmal.com",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "choir",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658140391182"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dea62dff74370e9efb8df1"
+  },
+  "firstname": [],
+  "mobile": "08166086913",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "usher",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658758701843"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dea651ff74370e9efb8df3"
+  },
+  "firstname": [],
+  "mobile": "08166130634",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "nmb",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658758737016"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df7c67a5e5913681cef66a"
+  },
+  "firstname": [],
+  "email": "hameedomeiza@gmail.com",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "admin",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658813543397"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df7cfca5e5913681cef670"
+  },
+  "firstname": [],
+  "email": "hameedomeiza@gtmail.com",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "admin",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658813692013"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df7d60a5e5913681cef676"
+  },
+  "firstname": [],
+  "email": "hameedomeiza@gmail.comt",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "admin",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658813792302"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df7e29a5e5913681cef678"
+  },
+  "firstname": [],
+  "email": "hameedomeiza@gmail.comyt",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "admin",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658813993096"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df7f09a5e5913681cef67b"
+  },
+  "firstname": [],
+  "mobile": "07045879658",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "kjhkj",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658814218011"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df812ca5e5913681cef67d"
+  },
+  "firstname": [],
+  "mobile": "08145789632",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "oha",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658814764764"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df827ba5e5913681cef681"
+  },
+  "firstname": [],
+  "mobile": "08145789636",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "oha",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658815099691"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8313a5e5913681cef683"
+  },
+  "firstname": [],
+  "mobile": "08145789637",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "oha",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658815251291"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8340a5e5913681cef685"
+  },
+  "firstname": [],
+  "mobile": "08145789638",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "oha",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658815296676"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df83a3a5e5913681cef687"
+  },
+  "firstname": [],
+  "mobile": "08145789631",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "oha",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658815395973"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8445a5e5913681cef68b"
+  },
+  "firstname": [],
+  "mobile": "08145789630",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "oha",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658815557322"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df84eea5e5913681cef68d"
+  },
+  "firstname": [],
+  "mobile": "08145789635",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "oha",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658815726812"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8659a5e5913681cef68f"
+  },
+  "firstname": [],
+  "email": "esquire@hameed.om",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "dfadfa",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658816089506"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8677a5e5913681cef693"
+  },
+  "firstname": [],
+  "email": "esquire@gmail.com",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "dfadfa",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658816119700"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8688a5e5913681cef695"
+  },
+  "firstname": [],
+  "mobile": "07056987465",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "dfadfa",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658816136330"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8a53a5e5913681cef69a"
+  },
+  "firstname": [],
+  "mobile": "09053634327",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "ushser",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658817107434"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62df8aa5a5e5913681cef69f"
+  },
+  "firstname": [],
+  "mobile": "09058796412",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "uytrfd",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658817189291"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfaa85c17f1782876bae31"
+  },
+  "firstname": [],
+  "mobile": "09748546958",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "uytr",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658825349750"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfac0dc17f1782876bae3c"
+  },
+  "firstname": [],
+  "mobile": "09053634320",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "Admin",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658825741007"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfadc4c17f1782876bae47"
+  },
+  "firstname": [],
+  "mobile": "08123654789",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "kjhjkh",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658826180419"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfb3e0c17f1782876bae4e"
+  },
+  "firstname": [],
+  "mobile": "07078965412",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "Uni",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658827744052"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfb401c17f1782876bae52"
+  },
+  "firstname": [],
+  "mobile": "08123654788",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "kjhjkh",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658827777874"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfb561c17f1782876bae56"
+  },
+  "firstname": [],
+  "mobile": "08123654786",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "kjhjkh",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658828129048"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfb578c17f1782876bae5a"
+  },
+  "firstname": [],
+  "mobile": "07078965411",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "Uni",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658828152649"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfb5b2c17f1782876bae5c"
+  },
+  "firstname": [],
+  "email": "Ohawi@yahoo.mmm",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "Uni",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658828210616"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfb5dfc17f1782876bae5e"
+  },
+  "firstname": [],
+  "email": "Ohawi@yahoo.uk",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "Uni",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658828255478"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfb60ac17f1782876bae60"
+  },
+  "firstname": [],
+  "email": "Ohawi@yahoo.com",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "Uni",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658828298196"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfd0abc17f1782876bae6a"
+  },
+  "firstname": [],
+  "email": "Hameedomeza@gmail.com",
+  "justInvited": true,
+  "invitedBy": {
+    "$oid": "62c055401b41f1b2a6ab82e2"
+  },
+  "admin": false,
+  "unit": "Uht",
+  "active": false,
+  "blocked": false,
+  "blockedBy": null,
+  "blockedAt": null,
+  "blockedReason": null,
+  "emailVerified": false,
+  "mobileVerified": false,
+  "invitedAt": {
+    "$date": {
+      "$numberLong": "1658835115399"
+    }
+  },
+  "__v": 0
+}]

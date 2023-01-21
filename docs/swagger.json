@@ -1,0 +1,3270 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "express_typescript_skeleton",
+		"version": "1.0.0",
+		"description": "a basic express app writen in typescript",
+		"license": {
+			"name": "ISC"
+		},
+		"contact": {
+			"name": "Abdulraheem A omeiza"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/api/auth/google/google-url": {
+			"get": {
+				"operationId": "GetGoogleUrl",
+				"responses": {
+					"201": {
+						"description": "link generated successfully",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "user not found"
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Authentication"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "- either login or registration",
+						"in": "query",
+						"name": "action",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"enum": [
+								"login",
+								"register"
+							]
+						}
+					}
+				]
+			}
+		},
+		"/api/auth/google/callback": {
+			"get": {
+				"operationId": "GetGoogleDetails",
+				"responses": {
+					"201": {
+						"description": "successfully",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "user not found"
+					},
+					"422": {
+						"description": "validation failed"
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Authentication"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "- this is the code sent by google",
+						"in": "query",
+						"name": "code",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "- either login or registration link",
+						"in": "query",
+						"name": "action",
+						"required": true,
+						"schema": {}
+					}
+				]
+			}
+		},
+		"/api/auth/google/validate-token": {
+			"post": {
+				"operationId": "GetGoogleToken",
+				"responses": {
+					"201": {
+						"description": "successfully",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"details": {},
+												"message": {
+													"type": "string"
+												},
+												"status": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"details",
+												"message",
+												"status"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Authentication"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "- header authorization token",
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/files/uploadFile": {
+			"post": {
+				"operationId": "UploadFile",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Files"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"image": {
+										"type": "string",
+										"format": "binary"
+									},
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									},
+									"category": {
+										"type": "string"
+									},
+									"tags": {
+										"type": "string"
+									},
+									"isFeatured": {
+										"type": "string"
+									},
+									"isActive": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"image",
+									"name",
+									"description",
+									"category",
+									"tags",
+									"isFeatured",
+									"isActive"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/files/upload-video": {
+			"post": {
+				"operationId": "UploadVideo",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Files"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"video": {
+										"type": "string",
+										"format": "binary"
+									},
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									},
+									"category": {
+										"type": "string"
+									},
+									"tags": {
+										"type": "string"
+									},
+									"isFeatured": {
+										"type": "string"
+									},
+									"isActive": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"video",
+									"name",
+									"description",
+									"category",
+									"tags",
+									"isFeatured",
+									"isActive"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/files/upload-any": {
+			"post": {
+				"operationId": "UploadAny",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Files"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"files": {
+										"items": {
+											"type": "string",
+											"format": "binary"
+										},
+										"type": "array"
+									},
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									},
+									"category": {
+										"type": "string"
+									},
+									"tags": {
+										"type": "string"
+									},
+									"isFeatured": {
+										"type": "string"
+									},
+									"isActive": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"files",
+									"name",
+									"description",
+									"category",
+									"tags",
+									"isFeatured",
+									"isActive"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/files/upload-any-multiple": {
+			"post": {
+				"operationId": "UploadAnyMultiple",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Files"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"multiple": {
+										"items": {
+											"type": "string",
+											"format": "binary"
+										},
+										"type": "array"
+									},
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									},
+									"category": {
+										"type": "string"
+									},
+									"tags": {
+										"type": "string"
+									},
+									"isFeatured": {
+										"type": "string"
+									},
+									"isActive": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"multiple",
+									"name",
+									"description",
+									"category",
+									"tags",
+									"isFeatured",
+									"isActive"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/user/pre-register": {
+			"post": {
+				"operationId": "PreRegisteruser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"emailOrMobile": "09053634327"
+										}
+									},
+									"Example 2": {
+										"value": {
+											"emailOrMobile": "blesseth.omeiza@gmail.com",
+											"unit": "usher"
+										}
+									}
+								}
+							}
+						}
+					},
+					"201": {
+						"description": "user pre-registered successfully"
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/user/check-invitation": {
+			"get": {
+				"operationId": "CheckInvitation",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"413": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/user/register": {
+			"post": {
+				"operationId": "CreateLogin",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/user/verify-token": {
+			"post": {
+				"operationId": "VerifyAccount",
+				"responses": {
+					"200": {
+						"description": "Account verified"
+					},
+					"201": {
+						"description": "Account verified",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"token": 54875,
+											"tokenRoute": "email"
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/user/send-token": {
+			"post": {
+				"operationId": "SendToken",
+				"responses": {
+					"201": {
+						"description": "Token sent",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"user": "+2347044124767",
+											"tokenRoute": "mobile"
+										}
+									},
+									"Example 2": {
+										"value": {
+											"user": "blesseth.omeiza@gmail.com",
+											"tokenRoute": "email"
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/user/login": {
+			"post": {
+				"operationId": "Login",
+				"responses": {
+					"200": {
+						"description": "Login successfull",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"emailOrMobile": "blesseth.omeiza@gmail.com",
+											"password": "123456qwerty"
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														false
+													],
+													"nullable": false
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														false
+													],
+													"nullable": false
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														false
+													],
+													"nullable": false
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														false
+													],
+													"nullable": false
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/user/create-profile": {
+			"post": {
+				"operationId": "CreateProfile",
+				"responses": {
+					"201": {
+						"description": "Profile updated successfully",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"firstname": "Abraham",
+											"lastname": "abdulraheem",
+											"gender": "male",
+											"ageGroup": "10-15"
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/user/update-profile": {
+			"post": {
+				"operationId": "UpdateProfile",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/user/profile": {
+			"get": {
+				"operationId": "GetProfile",
+				"responses": {
+					"201": {
+						"description": "Profile updated successfully",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"user": "blesseth.omeiza@gmail.com"
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "user",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/user/get-users": {
+			"get": {
+				"operationId": "FetchConverts",
+				"responses": {
+					"200": {
+						"description": "users gotten successfully",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"409": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "search_by",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "search_value",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "page",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/user/forgot-password": {
+			"post": {
+				"operationId": "ForgotPassword",
+				"responses": {
+					"201": {
+						"description": "Profile updated successfully",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"emailOrMobile": "blesseth.omeiza@gmail.com"
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"properties": {
+									"emailOrMobile": {}
+								},
+								"required": [
+									"emailOrMobile"
+								],
+								"type": "object"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/user/reset-password": {
+			"post": {
+				"operationId": "ResetPassword",
+				"responses": {
+					"201": {
+						"description": "Password changed successfully",
+						"content": {
+							"application/json": {
+								"schema": {},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"userId": "urw9rtu9w8947598759435",
+											"password": "123654qwerty",
+											"repeat_password": "123456qwerty",
+											"token": 15789
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"resp": {
+											"properties": {
+												"data": {},
+												"message": {
+													"type": "string"
+												},
+												"success": {
+													"type": "boolean",
+													"enum": [
+														true,
+														false
+													]
+												}
+											},
+											"required": [
+												"data",
+												"message",
+												"success"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"resp"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
