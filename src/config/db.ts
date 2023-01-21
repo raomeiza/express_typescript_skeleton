@@ -6,6 +6,7 @@ import User from "../api/models/User.model";
 const InitiateMongoServer = async () => {
   const { DATABASE_URL } = require('./index');
   try {
+    mongoose.set('strictQuery', true);
     await mongoose.connect(DATABASE_URL, {
 
       useNewUrlParser: true,

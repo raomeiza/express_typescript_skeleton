@@ -6,7 +6,16 @@
 		"requestBodies": {},
 		"responses": {},
 		"schemas": {},
-		"securitySchemes": {}
+		"securitySchemes": {
+			"apiKeyAuth": {
+				"type": "apiKey",
+				"in":"header",
+				"name":"app-api-key"
+			}
+		}
+	},
+	"security": {
+		"apiKeyAuth":[]
 	},
 	"info": {
 		"title": "express_typescript_skeleton",
